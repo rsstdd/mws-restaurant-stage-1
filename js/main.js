@@ -1,3 +1,5 @@
+/* eslint-disable no-undef, no-console, no-unused-vars */
+
 let restaurants, neighborhoods, cuisines;
 let map;
 let markers = [];
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', event => {
 /**
  * Fetch all neighborhoods and set their HTML.
  */
-fetchNeighborhoods = () => {
+const fetchNeighborhoods = () => {
   DBHelper.fetchNeighborhoods((error, neighborhoods) => {
     if (error) {
       // Got an error
@@ -105,7 +107,7 @@ updateRestaurants = () => {
         console.error(error);
       } else {
         resetRestaurants(restaurants);
-        fillRestaurantsHTML();
+        fillRestaurantsHTML(restaurants);
       }
     }
   );
@@ -120,8 +122,15 @@ resetRestaurants = restaurants => {
   const ul = document.getElementById('restaurants-list');
   ul.innerHTML = '';
 
+  console.log(self);
+  if (!self.markers) {
+    return;
+  }
   // Remove all map markers
-  self.markers.forEach(m => m.setMap(null));
+  self.markers.forEach(m => {
+    console.log('self.markers.forEach', m);
+    m.setMap(null);
+  });
   self.markers = [];
   self.restaurants = restaurants;
 };
@@ -140,7 +149,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Create restaurant HTML.
  */
-createRestaurantHTML = restaurant => {
+const createRestaurantHTML = restaurant => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
@@ -172,6 +181,7 @@ createRestaurantHTML = restaurant => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
+  console.log('ADD_MARKERS_MAP');
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
