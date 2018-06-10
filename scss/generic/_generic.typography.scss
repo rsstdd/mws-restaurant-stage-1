@@ -4,31 +4,35 @@
 // Dependencies:
 // ------------------------------------------------------------
 
+html {
+  font-size: $default-font-size;
+}
+
 body,
 td,
 th,
 p {
   color: $light-blk;
   font-family: $font-stack;
-  font-size: $default-font-size;
   line-height: $default-line-height;
 }
 
 body {
   background-color: $preset-wht-1;
+  font-weight: $font-weight-normal;
   margin: 0;
   position: relative;
 }
 
-ul,
-li {
-  color: $light-blk;
-  font-family: $font-stack;
-  font-size: $default-font-size;
+// Paragraph
+p {
+  margin-bottom: 1.3em;
 }
 
+// Anchor
 a {
   color: $orange;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -38,16 +42,49 @@ a:focus {
   text-decoration: none;
 }
 
+// Hgroup - Ratio defined from 16px base
+// https://type-scale.com/
+// --
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  font-family: $font-stack;
-  margin: 0 0 20px;
+h4 {
+  font-weight: inherit;
+  line-height: 1.2;
+  margin: 1.414em 0 .5em;
 }
 
+h1 {
+  font-size: 3.998em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.827em;
+}
+
+h3 {
+  font-size: 1.999em;
+}
+
+h4 {
+  font-size: 1.414em;
+}
+
+small,
+.font-small {
+  font-size: .707em;
+}
+
+// Lists
+ul,
+li {
+  color: $light-blk;
+  font-family: $font-stack;
+  font-size: $default-font-size;
+}
+
+// Select
 select {
   background-color: $preset-wht-1;
   border: 1px solid $preset-wht-1;

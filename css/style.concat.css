@@ -389,28 +389,29 @@ p {
   background-color: #f3f3f3;
   min-height: 100%; }
 
+html {
+  font-size: 1em; }
+
 body,
 td,
 th,
 p {
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.45; }
 
 body {
   background-color: #fdfdfd;
+  font-weight: 400;
   margin: 0;
   position: relative; }
 
-ul,
-li {
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px; }
+p {
+  margin-bottom: 1.3em; }
 
 a {
   color: #ffa500;
+  cursor: pointer;
   text-decoration: none; }
 
 a:hover,
@@ -421,17 +422,42 @@ a:focus {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
+  font-weight: inherit;
+  line-height: 1.2;
+  margin: 1.414em 0 .5em; }
+
+h1 {
+  font-size: 3.998em;
+  margin-top: 0; }
+
+h2 {
+  font-size: 2.827em; }
+
+h3 {
+  font-size: 1.999em; }
+
+h4 {
+  font-size: 1.414em; }
+
+small,
+.font-small {
+  font-size: .707em; }
+
+ul,
+li {
+  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin: 0 0 20px; }
+  font-size: 1em; }
 
 select {
   background-color: #fdfdfd;
   border: 1px solid #fdfdfd;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px; }
+  font-size: 1em; }
+
+.u-uppercase {
+  text-transform: uppercase; }
 
 .breadcrumb {
   background-color: #fdfdfd;
@@ -465,7 +491,7 @@ select {
 
 .filter-options h2 {
   color: #fdfdfd;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1;
   margin: 0 20px; }
@@ -480,7 +506,7 @@ select {
 .footer {
   background-color: #333;
   color: #aaa;
-  font-size: 16px;
+  font-size: 1em;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
@@ -502,10 +528,99 @@ nav h1 {
 
 nav h1 a {
   color: #fdfdfd;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase; }
+
+.inside header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; }
+
+.inside .map-container {
+  background: #0275d8 none repeat scroll 0 0;
+  height: 87%;
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 50%; }
+
+.inside .map {
+  background-color: #aaa;
+  height: 100%;
+  width: 100%; }
+
+.inside .footer {
+  bottom: 0;
+  position: absolute;
+  width: 50%; }
+
+.restaurant-name {
+  color: #f18200;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 15px 0 30px;
+  text-transform: uppercase; }
+
+.restaurant-img {
+  width: 90%; }
+
+.restaurant-address {
+  font-size: 12pt;
+  margin: 10px 0; }
+
+.restaurant-cuisine {
+  background-color: #333;
+  color: #aaa;
+  font-size: 12pt;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin: 0 0 20px;
+  padding: 2px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%; }
+
+.restaurant-container,
+.reviews-container {
+  border-bottom: 1px solid #fdfdfd;
+  border-top: 1px solid #fdfdfd;
+  padding: 140px 40px 30px;
+  width: 50%; }
+
+.reviews-container {
+  padding: 30px 40px 80px; }
+
+.reviews-container h2 {
+  color: #f18200;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-bottom: 2px; }
+
+.reviews-list {
+  margin: 0;
+  padding: 0; }
+
+.reviews-list li {
+  background-color: #f3f3f3;
+  border: 2px solid #f3f3f3;
+  display: block;
+  list-style-type: none;
+  margin: 0 0 30px;
+  overflow: hidden;
+  padding: 0 20px 20px;
+  position: relative;
+  width: 85%; }
+
+.reviews-list li p {
+  margin: 0 0 10px; }
+
+.restaurant-hours td {
+  color: #aaa; }
 
 .restaurants-list {
   background-color: #f3f3f3;
@@ -541,7 +656,7 @@ nav h1 a {
   text-transform: uppercase; }
 
 .restaurants-list p {
-  font-size: 16px;
+  font-size: 1em;
   margin: 0; }
 
 .restaurants-list li a {

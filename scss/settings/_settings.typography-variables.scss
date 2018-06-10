@@ -5,10 +5,11 @@
 // ------------------------------------------------------------
 
 // Font Stack
+// -- just use system fonts - it's easier/faster
 $font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 // Font Sizes
-$default-font-size: 16px;
+$default-font-size: 1em; // 1em == 16px
 
 // Font Weight
 $font-weight-2: 200;
@@ -16,7 +17,7 @@ $font-weight-3: 300;
 $font-weight-normal: 400;
 
 // Line Height
-$default-line-height: 1.5;
+$default-line-height: 1.45;
 $line-height-1: 1;
 
 // Letter Spacing

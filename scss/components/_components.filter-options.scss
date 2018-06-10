@@ -7,8 +7,8 @@
 .filter-options {
   align-items: center;
   background-color: $lght-blue;
-  height: 50px;
-  width: 100%;
+  min-height: 50px;
+  min-width: 100%;
 }
 
 .filter-options h2 {
@@ -17,6 +17,7 @@
   font-weight: $font-weight-normal;
   line-height: $line-height-1;
   margin: 0 20px;
+  padding: 10px 0 0;
 }
 
 .filter-options select {

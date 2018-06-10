@@ -6,9 +6,9 @@
 
 nav {
   background-color: $light-blk;
-  height: 80px;
+  min-height: 80px;
+  min-width: 100%;
   text-align: center;
-  width: 100%;
 }
 
 nav h1 {
@@ -20,5 +20,4 @@ nav h1 a {
   font-size: $default-font-size;
   font-weight: $font-weight-2;
   letter-spacing: 10px;
-  text-transform: uppercase;
 }

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <!-- Dev -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Prod -->
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
 
     <title>Restaurant Info</title>
   </head>
@@ -13,7 +16,7 @@
   <body class="inside">
     <header>
       <nav>
-        <h1><a href="/">Restaurant Reviews</a></h1>
+        <h1 class="u-uppercase"><a href="/">Restaurant Reviews</a></h1>
       </nav>
       <ul id="breadcrumb" class="breadcrumb">
         <li><a href="/">Home</a></li>
@@ -21,11 +24,11 @@
     </header>
 
     <main id="maincontent" class="main-content">
-      <section id="map-container">restaurants-list
+      <section id="map-container" class="map-container">restaurants-list
         <div id="map" class="map"></div>
       </section>
       <section id="restaurant-container" class="restaurant-container">
-        <h1 id="restaurant-name" class="restaurant-name"></h1>
+        <h1 id="restaurant-name" class="restaurant-name u-uppercase"></h1>
         <img id="restaurant-img" class="restaurant-img">
         <p id="restaurant-cuisine" class="restaurant-cuisine"></p>
         <p id="restaurant-address" class="restaurant-address"></p>
@@ -36,12 +39,13 @@
       </section>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer u-uppercase u-text-center">
       Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
 
+    <script type="text/javascript" src="sw.js"></script>
     <!-- Database helpers -->
-    <script type="text/javascript" src="js/dbhelper.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/dbhelper.js"></script>
     <!-- Main javascript file -->
     <script type="text/javascript" src="js/restaurant_info.js"></script>
     <!-- Google Maps -->
