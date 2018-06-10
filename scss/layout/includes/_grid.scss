@@ -1,0 +1,215 @@
+// File Name: layout/_grid.scss
+// Description: Project Structure
+// Used by: app.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+// --------------------------------------------------
+// containers
+// --------------------------------------------------
+
+@supports (display: flex) {
+  .container,
+  .container-full {
+    @include box-sizing(border-box);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: ($grid-spacing * 2);
+    padding-left: ($grid-spacing * 2);
+
+    .grid {
+      margin-right: $grid-spacing;
+      margin-left: $grid-spacing;
+      font-size: inherit;
+      letter-spacing: inherit;
+      word-spacing: inherit;
+    }
+  }
+
+  .container {
+    @media (min-width: $grid-xs) {
+      max-width: $grid-xs;
+    }
+
+    @media (min-width: $grid-sm) {
+      max-width: $grid-sm;
+    }
+
+    @media (min-width: $grid-md) {
+      max-width: $grid-md;
+    }
+
+    @media (min-width: $grid-lg) {
+      max-width: $grid-lg;
+    }
+
+    @media (min-width: $grid-xlg) {
+      max-width: $grid-xlg;
+    }
+  }
+
+  // --------------------------------------------------
+  // grid
+  // --------------------------------------------------
+
+  .grid {
+    @include box-sizing(border-box);
+    display: block;
+    @include display-flex();
+    @include flex-wrap();
+    font-size: inherit;
+    letter-spacing: inherit !important;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    word-spacing: inherit;
+
+    @include setup-whitespace();
+
+    &::before,
+    &::after {
+      @include box-sizing(border-box);
+      @include reset-whitespace();
+    }
+
+    // handle when lists are used as a grid
+    list-style-type: none;
+  }
+
+  // --------------------------------------------------
+  // col defaults
+  // --------------------------------------------------
+
+  [class^='col-'] {
+    @include box-sizing(border-box);
+    @include reset-whitespace();
+    font-size: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    padding: $grid-spacing;
+
+    &::before,
+    &::after {
+      @include box-sizing(border-box);
+      @include reset-whitespace();
+    }
+
+    // handle grids nested in columns
+    .grid {
+      @include flex(1, 1, auto);
+      margin: $grid-spacing;
+    }
+
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+}
+
+@supports not (display: flex) {
+  [class^='col-'] {
+    .grid {
+      display: block;
+      float: left;
+      margin: $grid-spacing;
+    }
+
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+}
+
+// --------------------------------------------------
+// grid generation
+// --------------------------------------------------
+
+@include make-grid(col-);
+
+@media (min-width: $grid-xs) {
+  @include make-grid(col-xs-);
+}
+
+@media (min-width: $grid-sm) {
+  @include make-grid(col-sm-);
+}
+
+@media (min-width: $grid-md) {
+  @include make-grid(col-md-);
+}
+
+@media (min-width: $grid-lg) {
+  @include make-grid(col-lg-);
+}
+
+@media (min-width: $grid-xlg) {
+  @include make-grid(col-xlg-);
+}
+
+// --------------------------------------------------
+// reflex col-auto
+// --------------------------------------------------
+
+.col-auto {
+  @include setup-auto-cols();
+}
+
+@media (min-width: $grid-xs) {
+  .col-xs-auto {
+    @include setup-auto-cols();
+  }
+}
+
+@media (min-width: $grid-sm) {
+  .col-sm-auto {
+    @include setup-auto-cols();
+  }
+}
+
+@media (min-width: $grid-md) {
+  .col-md-auto {
+    @include setup-auto-cols();
+  }
+}
+
+@media (min-width: $grid-lg) {
+  .col-lg-auto {
+    @include setup-auto-cols();
+  }
+}
+
+@media (min-width: $grid-xlg) {
+  .col-xlg-auto {
+    @include setup-auto-cols();
+  }
+}
+
+// --------------------------------------------------
+// order helpers generation
+// --------------------------------------------------
+
+@include make-order-helpers();
+
+@media only screen and (min-width: $grid-xs) {
+  @include loop-order-helpers($grid-columns, '-xs');
+}
+
+@media only screen and (min-width: $grid-sm) {
+  @include loop-order-helpers($grid-columns, '-sm');
+}
+
+@media only screen and (min-width: $grid-md) {
+  @include loop-order-helpers($grid-columns, '-md');
+}
+
+@media only screen and (min-width: $grid-lg) {
+  @include loop-order-helpers($grid-columns, '-lg');
+}
+
+@media only screen and (min-width: $grid-xlg) {
+  @include loop-order-helpers($grid-columns, '-xlg');
+}

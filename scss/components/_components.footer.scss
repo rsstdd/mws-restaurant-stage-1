@@ -1,0 +1,15 @@
+// file Name: components/_components.footer.scss
+// Description: Footer styles
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+.footer {
+  background-color: $light-blk;
+  color: $gray;
+  font-size: $default-font-size;
+  letter-spacing: 1px;
+  padding: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}

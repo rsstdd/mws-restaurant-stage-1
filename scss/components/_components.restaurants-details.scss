@@ -1,0 +1,110 @@
+// file Name: components/_components.restaurants-details.scss
+// Description: Restaurant Details Styles
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+.inside header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.inside .map-container {
+  background: $blue-2 none repeat scroll 0 0;
+  height: 87%;
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 50%;
+}
+
+.inside .map {
+  background-color: $gray;
+  height: 100%;
+  width: 100%;
+}
+
+.inside .footer {
+  bottom: 0;
+  position: absolute;
+  width: 50%;
+}
+
+.restaurant-name {
+  color: $orange-2;
+  font-size: 20pt;
+  font-weight: $font-weight-2;
+  letter-spacing: $letter-spacing-zero;
+  line-height: 1.1;
+  margin: 15px 0 30px;
+  text-transform: uppercase;
+}
+
+.restaurant-img {
+  width: 90%;
+}
+
+.restaurant-address {
+  font-size: 12pt;
+  margin: 10px 0;
+}
+
+.restaurant-cuisine {
+  background-color: $light-blk;
+  color: $gray;
+  font-size: 12pt;
+  font-weight: $font-weight-3;
+  letter-spacing: 10px;
+  margin: 0 0 20px;
+  padding: 2px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+}
+
+.restaurant-container,
+.reviews-container {
+  border-bottom: 1px solid $preset-wht-1;
+  border-top: 1px solid $preset-wht-1;
+  padding: 140px 40px 30px;
+  width: 50%;
+}
+
+.reviews-container {
+  padding: 30px 40px 80px;
+}
+
+.reviews-container h2 {
+  color: $orange-2;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-bottom: 2px;
+}
+
+.reviews-list {
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-list li {
+  background-color: $preset-wht-2;
+  border: 2px solid $preset-wht-2;
+  display: block;
+  list-style-type: none;
+  margin: 0 0 30px;
+  overflow: hidden;
+  padding: 0 20px 20px;
+  position: relative;
+  width: 85%;
+}
+
+.reviews-list li p {
+  margin: 0 0 10px;
+}
+
+.restaurant-hours td {
+  color: $gray;
+}

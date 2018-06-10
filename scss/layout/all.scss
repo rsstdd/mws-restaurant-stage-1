@@ -1,0 +1,9 @@
+// Flexbox Grid
+// flexbox support while providing a fall back to inline-block on older browsers
+
+// Structure and calculations are inspired by twitter bootstrap
+
+@import 'includes/variables';
+@import 'includes/mixins';
+@import 'includes/grid';
+@import 'includes/helpers';

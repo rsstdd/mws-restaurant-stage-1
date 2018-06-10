@@ -1,0 +1,39 @@
+// file Name: components/_components.breadcrumbs.scss
+// Description: breadcrumb styles
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+
+.breadcrumb {
+  background-color: $preset-wht-1;
+  font-size: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 40px 16px;
+  width: calc(50% - 80px);
+}
+
+// Display list items side by side
+.breadcrumb li {
+  display: inline;
+}
+
+// Add a slash symbol (/) before/behind each list item
+.breadcrumb li+li::before {
+  color: $black;
+  content: '/\00a0';
+  padding: 8px;
+}
+
+// Add a color to all links inside the list
+.breadcrumb li a {
+  color: $blue-2;
+  text-decoration: none;
+}
+
+// Add a color on mouse-over
+.breadcrumb li a:hover {
+  color: $blue-3;
+  text-decoration: underline;
+}

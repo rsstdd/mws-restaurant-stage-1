@@ -1,0 +1,56 @@
+// file Name: generic/_generic.typography.scss
+// Description: Project typography
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+body,
+td,
+th,
+p {
+  color: $light-blk;
+  font-family: $font-stack;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
+}
+
+body {
+  background-color: $preset-wht-1;
+  margin: 0;
+  position: relative;
+}
+
+ul,
+li {
+  color: $light-blk;
+  font-family: $font-stack;
+  font-size: $default-font-size;
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: $lght-blue;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-stack;
+  margin: 0 0 20px;
+}
+
+select {
+  background-color: $preset-wht-1;
+  border: 1px solid $preset-wht-1;
+  font-family: $font-stack;
+  font-size: $default-font-size;
+}

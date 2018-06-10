@@ -1,0 +1,28 @@
+// file Name: components/_components.filter-options.scss
+// Description: Restaurant Filtering Styles
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+.filter-options {
+  align-items: center;
+  background-color: $lght-blue;
+  height: 50px;
+  width: 100%;
+}
+
+.filter-options h2 {
+  color: $preset-wht-1;
+  font-size: $default-font-size;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-1;
+  margin: 0 20px;
+}
+
+.filter-options select {
+  height: 35px;
+  letter-spacing: 0;
+  margin: 10px;
+  padding: 0 10px;
+  width: 200px;
+}

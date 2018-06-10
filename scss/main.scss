@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+// ITCSS: SETTINGS
+// Variables
+@import 'settings/all';
+
+// ITCSS: TOOLS
+// Mixins and Funcitons
+@import 'tools/all';
+
+// ITCSS: GENERIC (ELEMENTS/BASE)
+// Resets/Meyers/Normalize/layout
+@import 'generic/all';
+// @import 'utilities/all';
+
+// ITCSS: COMPONENTS:
+// Styles unique to components
+@import 'components/all';
+
+// ITCSS: CONTAINERS:
+// Files that hold many components
+// @import 'containers/all';
+
+// ITCSS: TRUMPS
+// Use sparingly. These are meant to override
+// above styles by using more specific selectors
+// @import 'trumps/all';
+
+// This is code you wrote to meet a deadline and
+// need to come back and fix later
+// @import 'trumps/shame';

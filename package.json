@@ -1,0 +1,44 @@
+{
+  "name": "mws-restaurant-stage-1",
+  "version": "1.0.0",
+  "description": "Grow With Google Mobile Web Specialist Project #1",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass scss/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "postcss:css": "postcss css/style.concat.css -o css/style.min.css",
+    "build:css": "npm-run-all compile:sass concat:css postcss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsstdd/mws-restaurant-stage-1.git/"
+  },
+  "keywords": [
+    "mobile",
+    "first",
+    "responsive"
+  ],
+  "author": "Ross Todd <rosstod@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.6.2",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "concat": "^1.0.3",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^5.0.0",
+    "postcss-mq-optimize": "^0.0.0",
+    "postcss-pxtorem": "^4.0.1",
+    "prettier": "^1.13.5",
+    "sass-lint": "^1.12.1"
+  }
+}

@@ -1,0 +1,28 @@
+// --------------------------------------------------
+// grid variables
+// --------------------------------------------------
+
+$visibility-helpers: true !default;
+$boxmodel: borderbox !default;
+
+// Grid
+// -------------------------
+$grid-columns: 12 !default; // number of columns
+
+// Breakpoints
+// -------------------------
+$grid-xs: 576px !default;
+$grid-sm: 768px !default;
+$grid-md: 992px !default;
+$grid-lg: 1200px !default;
+$grid-xlg: 1600px !default;
+
+$grid-xxs-max: ($grid-xs - 1);
+$grid-xs-max: ($grid-sm - 1);
+$grid-sm-max: ($grid-md - 1);
+$grid-md-max: ($grid-lg - 1);
+$grid-lg-max: ($grid-xlg - 1);
+
+// Spacing
+// -------------------------
+$grid-spacing: 15px !default;

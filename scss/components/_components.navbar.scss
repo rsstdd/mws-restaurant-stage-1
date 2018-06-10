@@ -1,0 +1,24 @@
+// file Name: components/_components.navbar.scss
+// Description: Navbar navigation styles
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+nav {
+  background-color: $light-blk;
+  height: 80px;
+  text-align: center;
+  width: 100%;
+}
+
+nav h1 {
+  margin: auto;
+}
+
+nav h1 a {
+  color: $preset-wht-1;
+  font-size: $default-font-size;
+  font-weight: $font-weight-2;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
