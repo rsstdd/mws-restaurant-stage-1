@@ -69,5 +69,6 @@
 @include respond(md) {
   .restaurants-list li {
     margin: 0 5px 15px;
+    min-height: 380px;
   }
 }

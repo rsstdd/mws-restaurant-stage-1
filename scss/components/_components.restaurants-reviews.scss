@@ -3,3 +3,63 @@
 // Used by: main.scss
 // Dependencies:
 // ------------------------------------------------------------
+
+.restaurant-container,
+.reviews-container {
+  // max-width: 50%;
+  padding: 50px 40px 30px;
+}
+
+.reviews-container {
+  padding: 30px 40px 80px;
+}
+
+.reviews-container h2 {
+  color: $orange-2;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-bottom: 2px;
+}
+
+.reviews-list {
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-list li {
+  background-color: $preset-wht-2;
+  border: 2px solid $preset-wht-2;
+  display: block;
+  list-style-type: none;
+  margin: 0 0 30px;
+  max-width: 85%;
+  overflow: hidden;
+  padding: 0 20px 20px;
+  position: relative;
+}
+
+.reviews-list li p {
+  margin: 0 0 10px;
+}
+
+.reviews-list li p:nth-child(-n+3) {
+  font-weight: $font-weight-6;
+}
+
+.reviews-list li p:nth-child(-n+1) {
+  letter-spacing: $letter-spacing-2;
+  text-transform: uppercase;
+}
+
+.restaurant-hours td {
+  color: $gray;
+}
+
+// Responsive Styles
+@include respond(md) {
+  .restaurant-container,
+  .reviews-container {
+    padding: 140px 40px 30px;
+  }
+}

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef, no-console, no-unused-vars */
+
 let restaurant;
 let map;
 
@@ -52,6 +54,7 @@ fetchRestaurantFromURL = callback => {
  * Create restaurant HTML and add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
+  console.log('I am here', restaurant);
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
