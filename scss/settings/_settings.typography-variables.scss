@@ -15,6 +15,7 @@ $default-font-size: 1em; // 1em == 16px
 $font-weight-2: 200;
 $font-weight-3: 300;
 $font-weight-normal: 400;
+$font-weight-6: 600;
 
 // Line Height
 $default-line-height: 1.45;
@@ -22,3 +23,7 @@ $line-height-1: 1;
 
 // Letter Spacing
 $letter-spacing-zero: 0;
+$letter-spacing-2: 2px;
+
+// Word Spacing
+$default-word-spacing: normal;

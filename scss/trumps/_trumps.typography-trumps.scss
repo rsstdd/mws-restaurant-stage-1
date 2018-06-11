@@ -1,0 +1,11 @@
+// file Name: trumps/_trumps.typography-trumps.scss
+// Description: FIX grid bug
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+// FIX grid spacing bug
+html {
+  font-size: $default-font-size;
+  word-spacing: $default-word-spacing !important;
+}

@@ -12,6 +12,7 @@
 // Resets/Meyers/Normalize/layout
 @import 'generic/all';
 @import 'utilities/all';
+@import 'layout/all';
 
 // ITCSS: COMPONENTS:
 // Styles unique to components
@@ -24,7 +25,7 @@
 // ITCSS: TRUMPS
 // Use sparingly. These are meant to override
 // above styles by using more specific selectors
-// @import 'trumps/all';
+@import 'trumps/all';
 
 // This is code you wrote to meet a deadline and
 // need to come back and fix later

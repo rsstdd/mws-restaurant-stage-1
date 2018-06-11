@@ -6,6 +6,7 @@
 
 html {
   font-size: $default-font-size;
+  word-spacing: $default-word-spacing; // Fixes grid spacing bug
 }
 
 body,
@@ -15,6 +16,7 @@ p {
   color: $light-blk;
   font-family: $font-stack;
   line-height: $default-line-height;
+  word-spacing: $default-word-spacing;
 }
 
 body {
@@ -22,11 +24,13 @@ body {
   font-weight: $font-weight-normal;
   margin: 0;
   position: relative;
+  word-spacing: $default-word-spacing;
 }
 
 // Paragraph
 p {
   margin-bottom: 1.3em;
+  word-spacing: $default-word-spacing;
 }
 
 // Anchor
@@ -52,6 +56,7 @@ h4 {
   font-weight: inherit;
   line-height: 1.2;
   margin: 1.414em 0 .5em;
+  word-spacing: $default-word-spacing;
 }
 
 h1 {

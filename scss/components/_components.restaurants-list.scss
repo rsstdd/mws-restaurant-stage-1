@@ -8,27 +8,32 @@
   background-color: $preset-wht-2;
   list-style: outside none none;
   margin: 0;
-  padding: 30px 15px 60px;
-  text-align: center;
+  padding: 30px 10px 60px;
 }
 
 .restaurants-list li {
   background-color: $preset-wht-1;
-  border: 2px solid $gray;
-  margin: 15px;
+  box-shadow: $box-shadow-1;
+  margin: 0 0 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+}
+
+.restaurants-list .restaurant-text {
+  padding: 0 30px 25px;
+}
+
+.restaurants-list:hover li {
+  box-shadow: $box-shadow-1-hover;
 }
 
 .restaurants-list .restaurant-img {
   background-color: $gray;
   display: block;
   margin: 0;
-  max-width: 100%;
   min-height: 248px;
   min-width: 100%;
+  padding: 0;
 }
 
 // TODO : refactor typograhy to be separate from styles
@@ -52,10 +57,17 @@
   border-bottom: 3px solid $preset-wht-1;
   color: $preset-wht-1;
   display: inline-block;
-  font-size: 10pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+// Responsive
+// --
+@include respond(md) {
+  .restaurants-list li {
+    margin: 0 5px 15px;
+  }
 }

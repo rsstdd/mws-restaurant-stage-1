@@ -8,21 +8,24 @@
 // containers
 // --------------------------------------------------
 
+// TODO: since @supports, ironically, isn't well supported,
+// rewrite so that it doesn't rely on it.
+
 @supports (display: flex) {
   .container,
   .container-full {
     @include box-sizing(border-box);
-    width: 100%;
-    margin-right: auto;
     margin-left: auto;
-    padding-right: ($grid-spacing * 2);
+    margin-right: auto;
     padding-left: ($grid-spacing * 2);
+    padding-right: ($grid-spacing * 2);
+    width: 100%;
 
     .grid {
-      margin-right: $grid-spacing;
-      margin-left: $grid-spacing;
       font-size: inherit;
       letter-spacing: inherit;
+      margin-left: $grid-spacing;
+      margin-right: $grid-spacing;
       word-spacing: inherit;
     }
   }
@@ -55,26 +58,23 @@
 
   .grid {
     @include box-sizing(border-box);
+    @include display-flex;
+    @include flex-wrap;
+    @include setup-whitespace;
     display: block;
-    @include display-flex();
-    @include flex-wrap();
     font-size: inherit;
     letter-spacing: inherit !important;
-    padding: 0;
+    list-style-type: none; // handle when lists are used as a grid
     margin: 0 auto;
+    padding: 0;
     position: relative;
-    word-spacing: inherit;
-
-    @include setup-whitespace();
+    word-spacing: normal;
 
     &::before,
     &::after {
       @include box-sizing(border-box);
-      @include reset-whitespace();
+      @include reset-whitespace;
     }
-
-    // handle when lists are used as a grid
-    list-style-type: none;
   }
 
   // --------------------------------------------------
@@ -83,19 +83,22 @@
 
   [class^='col-'] {
     @include box-sizing(border-box);
-    @include reset-whitespace();
+    @include reset-whitespace;
+    display: inline-block;
     font-size: inherit;
     letter-spacing: inherit;
-    word-spacing: inherit;
-    position: relative;
-    width: 100%;
-    vertical-align: top;
     padding: $grid-spacing;
+    position: relative;
+    margin: 0 $grid-spacing;
+    vertical-align: top;
+    width: 100%;
+    word-spacing: inherit;
+    zoom: 1;
 
     &::before,
     &::after {
       @include box-sizing(border-box);
-      @include reset-whitespace();
+      @include reset-whitespace;
     }
 
     // handle grids nested in columns
@@ -103,24 +106,20 @@
       @include flex(1, 1, auto);
       margin: $grid-spacing;
     }
-
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
   }
 }
 
+// TODO: Not use @supports
 @supports not (display: flex) {
+  display: inline-block;
+  zoom: 1;
+
   [class^='col-'] {
     .grid {
       display: block;
       float: left;
       margin: $grid-spacing;
     }
-
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
   }
 }
 
@@ -155,36 +154,36 @@
 // --------------------------------------------------
 
 .col-auto {
-  @include setup-auto-cols();
+  @include setup-auto-cols;
 }
 
 @media (min-width: $grid-xs) {
   .col-xs-auto {
-    @include setup-auto-cols();
+    @include setup-auto-cols;
   }
 }
 
 @media (min-width: $grid-sm) {
   .col-sm-auto {
-    @include setup-auto-cols();
+    @include setup-auto-cols;
   }
 }
 
 @media (min-width: $grid-md) {
   .col-md-auto {
-    @include setup-auto-cols();
+    @include setup-auto-cols;
   }
 }
 
 @media (min-width: $grid-lg) {
   .col-lg-auto {
-    @include setup-auto-cols();
+    @include setup-auto-cols;
   }
 }
 
 @media (min-width: $grid-xlg) {
   .col-xlg-auto {
-    @include setup-auto-cols();
+    @include setup-auto-cols;
   }
 }
 
@@ -192,7 +191,7 @@
 // order helpers generation
 // --------------------------------------------------
 
-@include make-order-helpers();
+@include make-order-helpers;
 
 @media only screen and (min-width: $grid-xs) {
   @include loop-order-helpers($grid-columns, '-xs');

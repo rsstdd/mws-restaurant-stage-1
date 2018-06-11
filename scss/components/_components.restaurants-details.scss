@@ -5,19 +5,19 @@
 // ------------------------------------------------------------
 
 .inside header {
+  min-width: 100%;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1000;
 }
 
 .inside .map-container {
   background: $blue-2 none repeat scroll 0 0;
   height: 87%;
+  min-width: 50%;
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
 }
 
 .inside .map {
@@ -27,22 +27,20 @@
 }
 
 .inside .footer {
-  bottom: 0;
-  position: absolute;
-  width: 50%;
+  min-width: 100%;
+  z-index: 1000;
 }
 
 .restaurant-name {
   color: $orange-2;
   font-weight: $font-weight-2;
   letter-spacing: $letter-spacing-zero;
-  line-height: 1.1;
   margin: 15px 0 30px;
   text-transform: uppercase;
 }
 
 .restaurant-img {
-  width: 90%;
+  max-width: 90%;
 }
 
 .restaurant-address {
@@ -57,18 +55,16 @@
   font-weight: $font-weight-3;
   letter-spacing: 10px;
   margin: 0 0 20px;
-  padding: 2px 0;
+  max-width: 90%;
+  padding: 8px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
 }
 
 .restaurant-container,
 .reviews-container {
-  border-bottom: 1px solid $preset-wht-1;
-  border-top: 1px solid $preset-wht-1;
+  max-width: 50%;
   padding: 140px 40px 30px;
-  width: 50%;
 }
 
 .reviews-container {
@@ -94,16 +90,42 @@
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
+  max-width: 85%;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
 }
 
 .reviews-list li p {
   margin: 0 0 10px;
 }
 
+.reviews-list li p:nth-child(-n+3) {
+  font-weight: $font-weight-6;
+}
+
+.reviews-list li p:nth-child(-n+1) {
+  letter-spacing: $letter-spacing-2;
+  text-transform: uppercase;
+}
+
 .restaurant-hours td {
   color: $gray;
+}
+
+// Responsive Styles
+@include respond(md) {
+  .inside .footer {
+    min-width: 50%;
+  }
+
+  .inside .map-container {
+    height: 100%;
+  }
+
+  .restaurant-container,
+  .reviews-container {
+    // max-width: 100%;
+  }
+
 }

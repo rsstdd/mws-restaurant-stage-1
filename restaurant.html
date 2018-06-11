@@ -23,23 +23,37 @@
       </ul>
     </header>
 
-    <main id="maincontent" class="main-content">
-      <section id="map-container" class="map-container">restaurants-list
+    <main id="maincontent" class="main-content container-full grid">
+
+      <section
+        id="map-container"
+        class="map-container col-grid col-xs-12 col-sm-12 col-md-6 col-lg-6"
+      >
         <div id="map" class="map"></div>
       </section>
-      <section id="restaurant-container" class="restaurant-container">
+
+      <!-- col-xs-12 col-md-6 first-sm -->
+      <section
+        id="restaurant-container"
+        class="restaurant-container col-grid col-xs-12 col-sm-12 col-md-6 col-lg-6"
+      >
         <h1 id="restaurant-name" class="restaurant-name u-uppercase"></h1>
         <img id="restaurant-img" class="restaurant-img">
         <p id="restaurant-cuisine" class="restaurant-cuisine"></p>
         <p id="restaurant-address" class="restaurant-address"></p>
         <table id="restaurant-hours" class="restaurant-hours"></table>
       </section>
-      <section id="reviews-container" class="reviews-container">
+
+      <section
+        id="reviews-container"
+        class="reviews-container col-grid col-xs-12 col-sm-12 col-md-6 col-lg-6"
+      >
         <ul id="reviews-list" class="reviews-list"></ul>
       </section>
+
     </main>
 
-    <footer id="footer" class="footer u-uppercase u-text-center">
+    <footer id="footer" class="footer flex-footer u-text-center">
       Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
 
