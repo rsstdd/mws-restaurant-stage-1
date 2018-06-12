@@ -4,7 +4,7 @@ const OFF = 'OFF';
 
 // eslint in javascript format so that we can have comments
 module.exports = {
-  plugins: ['prettier'],
+  plugins: ['prettier', 'jsx-a11y'],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 8,
@@ -15,7 +15,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ['eslint:recommended', 'prettier', 'plugin:jsx-a11y/recommended'],
   rules: {
     'prettier/prettier': 'error',
     quotes: ['error', 'single'],

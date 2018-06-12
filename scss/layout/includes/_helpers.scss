@@ -169,44 +169,6 @@
   }
 }
 
-.justify-space-between {
-  @include justify-content-space-between();
-
-  // &.grid {
-  //   // text-align: justify;
-  //   // -moz-text-align-last: justify;
-  //   // text-align-last: justify;
-  //
-  //   [class^="col-"] {
-  //     @include reset-text-align();
-  //   }
-  // }
-}
-
-.justify-space-around {
-  @include justify-content-space-around();
-
-  &.grid {
-    text-align: justify;
-    -moz-text-align-last: justify;
-    text-align-last: justify;
-
-    [class^='col-'] {
-      @include reset-text-align();
-    }
-  }
-}
-
-// --------------------------------------------------
-// cosmetic grid modifiers
-// --------------------------------------------------
-
-// Removes internal padding from all columns in a grid
-.grid-bleed {
-  [class*='col-'] {
-    padding: 0;
-  }
-}
 
 // --------------------------------------------------
 // col modifiers
@@ -241,15 +203,6 @@
 // col-grid contents
 // --------------------------------------------------
 
-.flex-img {
-  display: block;
-  @include flex(0, 0, auto);
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-  *width: auto;
-}
-
 .flex-footer {
   width: 100%;
   margin-top: auto;
@@ -259,9 +212,3 @@
     margin-bottom: 0;
   }
 }
-
-// --------------------------------------------------
-// Responsive visibility modifiers
-// --------------------------------------------------
-
-@include responsive-visibility-helpers();
