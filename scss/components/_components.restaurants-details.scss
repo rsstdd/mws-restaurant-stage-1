@@ -4,13 +4,15 @@
 // Dependencies:
 // ------------------------------------------------------------
 
+// Header
 .inside header {
   min-width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: $rest-header-z-index;
 }
 
+// Map
 .inside .map-container {
   height: 40%;
   margin-top: 215px;
@@ -21,16 +23,19 @@
   height: 100%;
 }
 
+// Footer
 .inside .footer {
-  z-index: 1000;
+  max-width: 100%;
+  z-index: $rest-footer-z-index;
 }
 
+// Restaurant Detail Block
 .restaurant-name {
   color: $orange-2;
   font-weight: $font-weight-2;
   letter-spacing: $letter-spacing-zero;
   margin: 15px 0 30px;
-  text-transform: uppercase;
+  text-align: center;
 }
 
 .restaurant-img {
@@ -59,7 +64,7 @@
 // Responsive Styles
 @include respond(md) {
   .inside .footer {
-    min-width: 50%;
+    max-width: 50%;
   }
 
   .inside .map-container {

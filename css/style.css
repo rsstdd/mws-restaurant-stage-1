@@ -497,12 +497,12 @@ select {
   @media (min-width: 576px) {
     .container {
       max-width: 576px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     .container {
-      max-width: 768px; } }
-  @media (min-width: 992px) {
+      max-width: 600px; } }
+  @media (min-width: 900px) {
     .container {
-      max-width: 992px; } }
+      max-width: 900px; } }
   @media (min-width: 1200px) {
     .container {
       max-width: 1200px; } }
@@ -663,7 +663,7 @@ select {
     width: 8.33333%;
     *width: 8.23333%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .col-sm-12 {
     width: 100%;
     *width: 99.9%; }
@@ -701,7 +701,7 @@ select {
     width: 8.33333%;
     *width: 8.23333%; } }
 
-@media (min-width: 992px) {
+@media (min-width: 900px) {
   .col-md-12 {
     width: 100%;
     *width: 99.9%; }
@@ -828,14 +828,14 @@ select {
     flex: 1 0 0px;
     width: auto; } }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .col-sm-auto {
     -ms-flex: 1 0 auto;
     -webkit-flex: 1 0 0px;
     flex: 1 0 0px;
     width: auto; } }
 
-@media (min-width: 992px) {
+@media (min-width: 900px) {
   .col-md-auto {
     -ms-flex: 1 0 auto;
     -webkit-flex: 1 0 0px;
@@ -975,7 +975,7 @@ select {
     -webkit-order: 0;
     order: 0; } }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .order-12-sm {
     -ms-flex-order: 12;
     -webkit-order: 12;
@@ -1029,7 +1029,7 @@ select {
     -webkit-order: 0;
     order: 0; } }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 900px) {
   .order-12-md {
     -ms-flex-order: 12;
     -webkit-order: 12;
@@ -1416,15 +1416,15 @@ select {
   .hidden-xxs {
     display: none; } }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 599px) {
   .hidden-xs {
     display: none; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 899px) {
   .hidden-sm {
     display: none; } }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 900px) and (max-width: 1199px) {
   .hidden-md {
     display: none; } }
 
@@ -1523,6 +1523,7 @@ nav h1 a {
   height: 100%; }
 
 .inside .footer {
+  max-width: 100%;
   z-index: 1000; }
 
 .restaurant-name {
@@ -1530,7 +1531,7 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: 0;
   margin: 15px 0 30px;
-  text-transform: uppercase; }
+  text-align: center; }
 
 .restaurant-img {
   max-width: 90%; }
@@ -1553,7 +1554,7 @@ nav h1 a {
 
 @media only screen and (min-width: 900px) {
   .inside .footer {
-    min-width: 50%; }
+    max-width: 50%; }
   .inside .map-container {
     background: #0275d8 none repeat scroll 0 0;
     height: 87%;
@@ -1623,17 +1624,19 @@ nav h1 a {
 
 .restaurant-container,
 .reviews-container {
-  padding: 50px 40px 30px; }
-
-.reviews-container {
-  padding: 30px 40px 80px; }
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 20px; }
 
 .reviews-container h2 {
   color: #f18200;
   font-size: 32px;
   font-weight: 300;
   letter-spacing: -1px;
-  padding-bottom: 2px; }
+  padding-bottom: 2px;
+  text-align: center; }
 
 .reviews-list {
   margin: 0;
@@ -1647,7 +1650,7 @@ nav h1 a {
   margin: 0 0 30px;
   max-width: 85%;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 0;
   position: relative; }
 
 .reviews-list li p {
@@ -1666,7 +1669,14 @@ nav h1 a {
 @media only screen and (min-width: 900px) {
   .restaurant-container,
   .reviews-container {
-    padding: 140px 40px 30px; } }
+    margin: 0;
+    max-width: 100%; }
+  .restaurant-container {
+    padding-top: 140px; }
+  .reviews-container h2 {
+    text-align: left; }
+  .reviews-list li {
+    padding: 0 10px 10px; } }
 
 html {
   font-size: 1em;
