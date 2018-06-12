@@ -442,11 +442,11 @@ h4 {
   word-spacing: normal; }
 
 h1 {
-  font-size: 3.998em;
+  font-size: 1.999em;
   margin-top: 0; }
 
 h2 {
-  font-size: 2.827em; }
+  font-size: 1.414em; }
 
 h3 {
   font-size: 1.999em; }
@@ -469,6 +469,20 @@ select {
   border: 1px solid #fdfdfd;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1em; }
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 2.827em;
+    margin-top: 0; }
+  h2 {
+    font-size: 1.999em; } }
+
+@media only screen and (min-width: 900px) {
+  h1 {
+    font-size: 3.998em;
+    margin-top: 0; }
+  h2 {
+    font-size: 2.827em; } }
 
 .u-uppercase {
   text-transform: uppercase; }
@@ -1500,11 +1514,11 @@ nav {
   text-align: center; }
 
 nav h1 {
-  margin: auto; }
+  margin: auto;
+  padding: 15px; }
 
 nav h1 a {
   color: #fdfdfd;
-  font-size: 1em;
   font-weight: 200;
   letter-spacing: 10px; }
 
